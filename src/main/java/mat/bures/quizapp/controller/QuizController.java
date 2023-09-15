@@ -2,7 +2,7 @@ package mat.bures.quizapp.controller;
 
 import mat.bures.quizapp.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +24,6 @@ public class QuizController {
         public ResponseEntity<String> createQuiz(@RequestParam String category,
                                                  @RequestParam int numQ,
                                                  @RequestParam String title) {
-        return new ResponseEntity<>("prepared", HttpStatus.OK);
+        return quizService.createQuiz(category, numQ, title);
         }
     }

@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +17,7 @@ public class QuestionService {
     @Autowired QuestionService (QuestionDao questionDao) {
         this.questionDao = questionDao;
     }
+
     public ResponseEntity<List<Question>> getAllQuestions() {
         try{
             return new ResponseEntity<>(questionDao.findAll(), HttpStatus.OK);
