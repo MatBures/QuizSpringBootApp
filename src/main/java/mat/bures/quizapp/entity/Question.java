@@ -9,10 +9,11 @@ import jakarta.persistence.Id;
 public class Question {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String difficultyLevel;
     private String questionTitle;
+    private String category;
     private String option1;
     private String option2;
     private String option3;
@@ -41,6 +42,14 @@ public class Question {
 
     public void setQuestionTitle(String questionTitle) {
         this.questionTitle = questionTitle;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getOption1() {
