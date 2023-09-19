@@ -3,7 +3,7 @@ package mat.bures.quizapp.controller;
 import mat.bures.quizapp.entity.Question;
 import mat.bures.quizapp.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
